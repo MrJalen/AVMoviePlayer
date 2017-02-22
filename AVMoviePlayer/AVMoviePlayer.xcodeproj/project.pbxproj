@@ -30,6 +30,8 @@
 		8C44CD691E5D5E53008295AD /* AVMoviePlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C44CD561E5D5E53008295AD /* AVMoviePlayerController.m */; settings = {ASSET_TAGS = (); }; };
 		8C44CD6A1E5D5E53008295AD /* AVMoviePlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C44CD581E5D5E53008295AD /* AVMoviePlayerView.m */; settings = {ASSET_TAGS = (); }; };
 		8C44CD6B1E5D5E53008295AD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8C44CD5A1E5D5E53008295AD /* README.md */; settings = {ASSET_TAGS = (); }; };
+		8C44CD6E1E5D629D008295AD /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C44CD6D1E5D629D008295AD /* MediaPlayer.framework */; };
+		8C44CD701E5D62A9008295AD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C44CD6F1E5D62A9008295AD /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		8C44CD571E5D5E53008295AD /* AVMoviePlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVMoviePlayerView.h; sourceTree = "<group>"; };
 		8C44CD581E5D5E53008295AD /* AVMoviePlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVMoviePlayerView.m; sourceTree = "<group>"; };
 		8C44CD5A1E5D5E53008295AD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8C44CD6D1E5D629D008295AD /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		8C44CD6F1E5D62A9008295AD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C44CD701E5D62A9008295AD /* AVFoundation.framework in Frameworks */,
+				8C44CD6E1E5D629D008295AD /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				8C44CD2D1E5D5E2C008295AD /* AVMoviePlayer */,
+				8C44CD6C1E5D6263008295AD /* Frameworks */,
 				8C44CD2C1E5D5E2C008295AD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -148,6 +155,15 @@
 				8C44CD541E5D5E53008295AD /* kr-video-player-shrinkscreen@3x.png */,
 			);
 			path = Assets_Images;
+			sourceTree = "<group>";
+		};
+		8C44CD6C1E5D6263008295AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C44CD6F1E5D62A9008295AD /* AVFoundation.framework */,
+				8C44CD6D1E5D629D008295AD /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
