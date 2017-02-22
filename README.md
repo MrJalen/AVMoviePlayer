@@ -1,11 +1,11 @@
 # AVMoviePlayer
 
-AVMoviePlayer 是使用系统框架 MPMoviePlayerController 封装的视频播放器
-功能：1.根据手机旋转自由切换横竖屏；
-     2.手势轻点显示/隐藏topView/bottomView；
-     3.视频开始播放几秒后topView/bottomView自动隐藏；
-     4.手势左右滑动加载视频快进/快退；
-     5.格式支持：MOV、MP4、M4V、3GP、M3U8等。
+AVMoviePlayer 是使用系统框架 MPMoviePlayerController 封装的视频播放器</br>
+功能：1.根据手机旋转自由切换横竖屏；</br>
+     2.手势轻点显示/隐藏topView/bottomView；</br>
+     3.视频开始播放几秒后topView/bottomView自动隐藏；</br>
+     4.手势左右滑动加载视频快进/快退；</br>
+     5.格式支持：MOV、MP4、M4V、3GP、M3U8等。</br>
 
 
 # 使用：
@@ -20,7 +20,7 @@ AVMoviePlayer 是使用系统框架 MPMoviePlayerController 封装的视频播�
 }
 
 
-#pragma mark - 播放视频
+pragma mark - 播放视频
 - (void)playVideo{
     NSURL *url = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"];
     [self addVideoPlayerWithURL:url];
@@ -64,4 +64,4 @@ AVMoviePlayer 是使用系统框架 MPMoviePlayerController 封装的视频播�
 	</dict>
   
   
-# 添加系统依赖框架： AVFoundation.framework  MediaPlayer.framework
+# 添加系统依赖框架： AVFoundation.framework MediaPlayer.framework
