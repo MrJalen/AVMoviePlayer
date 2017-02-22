@@ -10,7 +10,7 @@ AVMoviePlayer 是使用系统框架 MPMoviePlayerController 封装的视频播�
 
 
 使用：</br>
-- (void)viewDidLoad {
+-- (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -22,35 +22,35 @@ AVMoviePlayer 是使用系统框架 MPMoviePlayerController 封装的视频播�
 
 
 pragma mark - 播放视频</br>
-- (void)playVideo {</br>
-    NSURL *url = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"];</br>
-    [self addVideoPlayerWithURL:url];</br>
-}</br>
+-- (void)playVideo {
+    NSURL *url = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"];
+    [self addVideoPlayerWithURL:url];
+}
 
-- (void)addVideoPlayerWithURL:(NSURL *)url {</br>
-    if (!self.videoController) {</br>
+-- (void)addVideoPlayerWithURL:(NSURL *)url {
+    if (!self.videoController) {
         self.videoController = [[AVMoviePlayerController alloc] initWithFrame:CGRectMake(0, 0, KSCREEN_WIDTH, KSCREEN_HEIGHT) movieTitle:@"播放时间.M3U8格式"];</br>
         
-        __weak typeof(self)weakSelf = self;</br>
+        __weak typeof(self)weakSelf = self;
         
-        [self.videoController setWillBackOrientationPortrait:^{</br>
-            [weakSelf toolbarHidden:NO];</br>
-        }];</br>
-        [self.videoController setWillChangeToFullscreenMode:^{</br>
-            [weakSelf toolbarHidden:YES];</br>
-        }];</br>
-        [self.view addSubview:self.videoController.view];</br>
-    }</br>
-    self.videoController.contentURL = url;</br>
+        [self.videoController setWillBackOrientationPortrait:^{
+            [weakSelf toolbarHidden:NO];
+        }];
+        [self.videoController setWillChangeToFullscreenMode:^{
+            [weakSelf toolbarHidden:YES];
+        }];
+        [self.view addSubview:self.videoController.view];
+    }
+    self.videoController.contentURL = url;
     
-}</br>
+}
 
 //隐藏navigation tabbar 电池栏</br>
-- (void)toolbarHidden:(BOOL)Bool {</br>
-    self.navigationController.navigationBar.hidden = Bool;</br>
-    self.tabBarController.tabBar.hidden = Bool;</br>
-    [[UIApplication sharedApplication] setStatusBarHidden:Bool withAnimation:UIStatusBarAnimationFade];</br>
-}</br>
+-- (void)toolbarHidden:(BOOL)Bool {
+    self.navigationController.navigationBar.hidden = Bool
+    self.tabBarController.tabBar.hidden = Bool;
+    [[UIApplication sharedApplication] setStatusBarHidden:Bool withAnimation:UIStatusBarAnimationFade];
+}
 
 
 # plist文件添加相关key</br>
